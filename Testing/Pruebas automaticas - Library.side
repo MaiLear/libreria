@@ -1,0 +1,2135 @@
+{
+  "id": "19a91a89-b605-4f60-b673-5fd865523f7e",
+  "version": "2.0",
+  "name": "Pruebas automaticas - Library",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "a3091ebc-8b13-4f9b-9092-964dd9de6f26",
+    "name": "Crear usuario",
+    "commands": [{
+      "id": "4eacc7c9-0ffd-4554-b7f0-562b1f869b08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0187828-1456-4e35-b38e-a76b80c6f1dc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7669079b-f700-4ebd-a9d3-9cb63c1bedc8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2f1ad37-a3d3-4f82-896c-5ddb3b09f90a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Usuarios",
+      "targets": [
+        ["linkText=Usuarios", "linkText"],
+        ["css=.nav-link:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Usuarios')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[5]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/users']", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Usuarios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24fb3e2d-dbf5-4f18-b9b7-564a88fa48a7",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-user",
+      "targets": [
+        ["id=create-user", "id"],
+        ["css=#create-user", "css:finder"],
+        ["xpath=//button[@id='create-user']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e4e0c17-81b8-4cf9-a03d-9d8af35e80f4",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2686dada-825b-487a-b631-09a987af5fa5",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "estela"
+    }, {
+      "id": "ec523060-22e5-4b0a-9813-fb9b5c6bc68d",
+      "comment": "",
+      "command": "click",
+      "target": "name=document_number",
+      "targets": [
+        ["name=document_number", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='document_number']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f886b835-e671-4e7f-a1b7-f214a7184f98",
+      "comment": "",
+      "command": "type",
+      "target": "name=document_number",
+      "targets": [
+        ["name=document_number", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='document_number']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": "4545456"
+    }, {
+      "id": "d1445590-e2b6-4f36-8f3f-b2f68c6d6363",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b8bd13c-363c-47ec-babd-edf536c69c25",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "User created successful"
+    }]
+  }, {
+    "id": "7cf37a81-314e-4955-9d7b-d237079acec3",
+    "name": "Crear author",
+    "commands": [{
+      "id": "ab13c9e1-e79d-4fee-bddb-d3724c730f7d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9fcdfc1-8bfb-4447-ad39-9ace985e93b1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2f9fdb1-cf89-40d6-b4f8-b328bcdd0704",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c295e60d-9791-4be5-92dc-43adeb8f2dd8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Autores",
+      "targets": [
+        ["linkText=Autores", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Autores')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/authors']", "xpath:href"],
+        ["xpath=//div[2]/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Autores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cff8a03a-9b24-454c-b87c-8b4a9b172637",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-author",
+      "targets": [
+        ["id=create-author", "id"],
+        ["css=#create-author", "css:finder"],
+        ["xpath=//button[@id='create-author']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear autor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3de00fbd-e39b-4648-a3e0-973b1b86f34d",
+      "comment": "",
+      "command": "click",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5ed2f82-65fb-48eb-992d-b64922aa1695",
+      "comment": "",
+      "command": "type",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "yolanda"
+    }, {
+      "id": "55d043c0-7a3e-49a2-9929-3f449edf5571",
+      "comment": "",
+      "command": "click",
+      "target": "name=second_name",
+      "targets": [
+        ["name=second_name", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='second_name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aba0864-f0f1-48d0-8004-28ed8b116cb8",
+      "comment": "",
+      "command": "type",
+      "target": "name=second_name",
+      "targets": [
+        ["name=second_name", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='second_name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": "perez"
+    }, {
+      "id": "ba022935-645f-439f-9d45-ebcbfcde5164",
+      "comment": "",
+      "command": "click",
+      "target": "name=age",
+      "targets": [
+        ["name=age", "name"],
+        ["css=.col:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='age']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51a8a1cf-b26e-48c0-872f-7a30dff66ced",
+      "comment": "",
+      "command": "type",
+      "target": "name=age",
+      "targets": [
+        ["name=age", "name"],
+        ["css=.col:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='age']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "85eca180-ac42-47c7-a0fe-e5d034c52fab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b364b6b2-16b0-4005-9d41-9d1df9992fa5",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93778cfd-1c00-4ab0-b1f0-971c423d1440",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "137aa16c-83f2-46ec-955a-3324fa56c18f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Author created successfull"
+    }]
+  }, {
+    "id": "6b91d336-fe33-40e2-a35a-fa1f41a7bc46",
+    "name": "Crear libro",
+    "commands": [{
+      "id": "cef714a3-e202-4700-b8c1-86ad98600194",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7dc8225a-7770-4de4-9608-28cd4c12a251",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b330fb35-2071-41bd-95fd-afa048ba6856",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b8af525-e30c-4990-aecc-cc26fc3f2d88",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Libros",
+      "targets": [
+        ["linkText=Libros", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Libros')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Libros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2354860d-6231-45de-9c12-c3851379668e",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-book",
+      "targets": [
+        ["id=create-book", "id"],
+        ["css=#create-book", "css:finder"],
+        ["xpath=//button[@id='create-book']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Libro')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1b43cf2-cc8e-478d-bc25-89a02f74cd93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(1)",
+      "targets": [
+        ["css=.col:nth-child(1)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div/label", "xpath:idRelative"],
+        ["xpath=//form/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Nombre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c4c0bcb-b444-4787-a1dc-66e1e5bedf09",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "Alfredo"
+    }, {
+      "id": "64c6eb1e-e2cc-43be-b74b-beecf6ceca86",
+      "comment": "",
+      "command": "click",
+      "target": "name=cost",
+      "targets": [
+        ["name=cost", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='cost']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22a67354-2956-478d-9346-1e8adce5bd6a",
+      "comment": "",
+      "command": "type",
+      "target": "name=cost",
+      "targets": [
+        ["name=cost", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='cost']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "57527e6a-e50e-4f62-8555-b86ab8f5d050",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "686b7e9e-a15d-40af-8352-8aff8746047c",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "a118f93d-042b-4736-b122-98d802994f79",
+      "comment": "",
+      "command": "click",
+      "target": "id=author-select",
+      "targets": [
+        ["id=author-select", "id"],
+        ["name=author_id", "name"],
+        ["css=#author-select", "css:finder"],
+        ["xpath=//select[@id='author-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[4]/select", "xpath:idRelative"],
+        ["xpath=//label[4]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'CARLOS Andres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f01d5cdf-1114-4597-a098-5ace5d3acdac",
+      "comment": "",
+      "command": "click",
+      "target": "id=author-select",
+      "targets": [
+        ["id=author-select", "id"],
+        ["name=author_id", "name"],
+        ["css=#author-select", "css:finder"],
+        ["xpath=//select[@id='author-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[4]/select", "xpath:idRelative"],
+        ["xpath=//label[4]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'CARLOS Andres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40870e49-ba2e-4015-abb8-e9ea5d4a92ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3812acfc-09b7-473d-8bf6-65b28ed33280",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Book created successfull"
+    }]
+  }, {
+    "id": "71f62c45-709b-4a4f-b00c-246c5a7b893b",
+    "name": "Reservar libro",
+    "commands": [{
+      "id": "908145f0-2e6f-460e-bacf-f2bcdfd2247e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96f5e9b1-e343-425a-9b80-e80c7801b329",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "142a9242-1712-419c-8f03-bfc2c4448f85",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfffa261-6f1d-4148-80c4-559e92875bd0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Reservas",
+      "targets": [
+        ["linkText=Reservas", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Reservas')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[3]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/lends']", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Reservas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef85e8ae-9b44-46be-9080-9d2793fac47d",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-lend",
+      "targets": [
+        ["id=create-lend", "id"],
+        ["css=#create-lend", "css:finder"],
+        ["xpath=//button[@id='create-lend']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear reservacion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2883319-879c-49bb-a44b-4e032250e0dd",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eb14602-8c3d-42c6-92c5-e50daef79b67",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "0cf4a85f-86f5-4d51-925f-904927dd805c",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "91471def-554e-411f-be45-8bfcc6515924",
+      "comment": "",
+      "command": "click",
+      "target": "id=user-select",
+      "targets": [
+        ["id=user-select", "id"],
+        ["name=user_id", "name"],
+        ["css=#user-select", "css:finder"],
+        ["xpath=//select[@id='user-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/select", "xpath:idRelative"],
+        ["xpath=//label[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d95297e-a12e-4699-9811-5bdcec861725",
+      "comment": "",
+      "command": "click",
+      "target": "name=end_date",
+      "targets": [
+        ["name=end_date", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='end_date']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff66c115-d7c5-4a96-bf69-bb6ba9f00350",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_date",
+      "targets": [
+        ["name=end_date", "name"],
+        ["css=.col:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='end_date']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": "2024-06-28 01:15:30"
+    }, {
+      "id": "151fb0e0-f76f-44ff-8a86-675dcdd6fd82",
+      "comment": "",
+      "command": "click",
+      "target": "id=user-select",
+      "targets": [
+        ["id=user-select", "id"],
+        ["name=user_id", "name"],
+        ["css=#user-select", "css:finder"],
+        ["xpath=//select[@id='user-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/select", "xpath:idRelative"],
+        ["xpath=//label[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "039aee7c-43f2-4f40-9497-07edee247d1f",
+      "comment": "",
+      "command": "select",
+      "target": "id=user-select",
+      "targets": [],
+      "value": "label=carlos"
+    }, {
+      "id": "3f853c04-caa4-472d-ac6f-7a1365bca772",
+      "comment": "",
+      "command": "click",
+      "target": "id=book-select",
+      "targets": [
+        ["id=book-select", "id"],
+        ["name=book_id", "name"],
+        ["css=#book-select", "css:finder"],
+        ["xpath=//select[@id='book-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[4]/select", "xpath:idRelative"],
+        ["xpath=//label[4]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'Alfredo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a250c5ae-779e-4810-a430-0a0b685bcaa5",
+      "comment": "",
+      "command": "click",
+      "target": "id=book-select",
+      "targets": [
+        ["id=book-select", "id"],
+        ["name=book_id", "name"],
+        ["css=#book-select", "css:finder"],
+        ["xpath=//select[@id='book-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[4]/select", "xpath:idRelative"],
+        ["xpath=//label[4]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'Alfredo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff9b376e-91ea-4c70-966b-2bfc4e06be7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Reservar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8108c5a0-e75d-465c-be40-9e6d3dda7e17",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "The book loan created successfull"
+    }]
+  }, {
+    "id": "d9c1cd00-e819-484e-ade4-9acae5ace707",
+    "name": "Vender libro",
+    "commands": [{
+      "id": "ecde09bd-ac9b-4acf-829a-d0992054bd08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b797503-ffff-45d5-b475-f1d50cd53ed7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d6b1b0e-9417-44a0-becf-2000418c487a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11b4a9fd-506b-46a1-b419-4a83d0d2cefe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ventas",
+      "targets": [
+        ["linkText=Ventas", "linkText"],
+        ["css=.nav-link:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Ventas')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[4]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/sales']", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ventas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8ab3fca-254f-4346-90a6-c5e682790871",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-sale",
+      "targets": [
+        ["id=create-sale", "id"],
+        ["css=#create-sale", "css:finder"],
+        ["xpath=//button[@id='create-sale']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hacer compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fae5c9f8-bbd7-4992-8dc9-0669eb434c56",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc1d74bb-34d4-4e8e-abdd-1148e2b077f2",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "478e2e90-311d-4396-9479-22c81e8a2c4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(2)",
+      "targets": [
+        ["css=.col:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9445b35d-efab-4dca-84fa-1f305eb554bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=user-select",
+      "targets": [
+        ["id=user-select", "id"],
+        ["name=user_id", "name"],
+        ["css=#user-select", "css:finder"],
+        ["xpath=//select[@id='user-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/select", "xpath:idRelative"],
+        ["xpath=//label[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bff59d41-ac45-41e9-898c-ed2c8108060a",
+      "comment": "",
+      "command": "select",
+      "target": "id=user-select",
+      "targets": [],
+      "value": "label=estela"
+    }, {
+      "id": "33212697-4c44-42ac-9d38-b43dcaff2acf",
+      "comment": "",
+      "command": "click",
+      "target": "id=book-select",
+      "targets": [
+        ["id=book-select", "id"],
+        ["name=book_id", "name"],
+        ["css=#book-select", "css:finder"],
+        ["xpath=//select[@id='book-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/select", "xpath:idRelative"],
+        ["xpath=//label[3]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'Alfredo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc8c931a-bb6a-425b-ad6b-4f0e45aaebde",
+      "comment": "",
+      "command": "click",
+      "target": "id=book-select",
+      "targets": [
+        ["id=book-select", "id"],
+        ["name=book_id", "name"],
+        ["css=#book-select", "css:finder"],
+        ["xpath=//select[@id='book-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/select", "xpath:idRelative"],
+        ["xpath=//label[3]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'Alfredo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af14a0bf-cbf6-44db-bbe2-10195fec83b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Comprar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9a17255-c229-403d-84df-5001b9b13d0c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Sale created successfull"
+    }]
+  }, {
+    "id": "95dafd11-8f4a-4543-826b-8190f59f4513",
+    "name": "Actualizar usuario",
+    "commands": [{
+      "id": "9c266e72-f865-49d5-8bae-5c8b20965a0e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfd5364f-8321-4a5e-8793-323760c98ecf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f003adff-2b68-40ec-a2c8-3cf9673be6a3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88ff953f-8df2-462f-8f92-e2ca68fac18b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Usuarios",
+      "targets": [
+        ["linkText=Usuarios", "linkText"],
+        ["css=.nav-link:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Usuarios')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[5]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/users']", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Usuarios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a1b640a-fbce-41e9-b337-0095e7d551b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) #edit-btn",
+      "targets": [
+        ["css=tr:nth-child(3) #edit-btn", "css:finder"],
+        ["xpath=(//button[@id='edit-btn'])[3]", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr[3]/td[4]/button", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42d8c8d7-8a42-42b9-b4c9-c1f086477912",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7d099ac-efe8-41fd-a31b-db73cd75b9aa",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "alberto"
+    }, {
+      "id": "136faeff-71c8-42e1-91ba-4fd3b024ac91",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f626968-c76c-4f8d-b61c-c382022a3f54",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "User updated successfull"
+    }]
+  }, {
+    "id": "3cfde253-1ae1-4317-a4a9-0a0c0011220c",
+    "name": "Actualizar author",
+    "commands": [{
+      "id": "bbcac9f0-5b64-459a-b1e6-8db513bfa688",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afe2fc16-7f73-40bf-9bc5-00ede4e7c6b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0200779-449f-4afe-ac42-2ba9350dc48c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36a33912-fc00-4437-9068-c4ec05e02a44",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Autores",
+      "targets": [
+        ["linkText=Autores", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Autores')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/authors']", "xpath:href"],
+        ["xpath=//div[2]/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Autores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3562c739-f902-4639-8c7e-d05c005ec06e",
+      "comment": "",
+      "command": "click",
+      "target": "id=edit-btn",
+      "targets": [
+        ["id=edit-btn", "id"],
+        ["css=#edit-btn", "css:finder"],
+        ["xpath=//button[@id='edit-btn']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[5]/button", "xpath:idRelative"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d87d5dcc-dd9a-4d30-88bb-9216af3d159d",
+      "comment": "",
+      "command": "click",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52e8f02e-f17f-4183-8181-44802deed125",
+      "comment": "",
+      "command": "type",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "Ramiro"
+    }, {
+      "id": "b334ce66-9a67-456f-aab4-634415521eb4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84f629e9-62a5-44f7-9484-85f1852c1e70",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Author updated successfull"
+    }]
+  }, {
+    "id": "97d08880-c64a-43a1-93af-efa743ab8201",
+    "name": "Actualizar libro",
+    "commands": [{
+      "id": "98a8ca61-dade-4652-bb15-1ea0e8e01394",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e86e9e6-3832-4c9c-a89d-5cac58287390",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72fbf25a-9d24-402e-847b-574997078e58",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dacf050f-9798-4a78-b9a4-002fd46f175f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Libros",
+      "targets": [
+        ["linkText=Libros", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Libros')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Libros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8298d77-a1d6-4e79-a066-08a83caac2a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=edit-btn",
+      "targets": [
+        ["id=edit-btn", "id"],
+        ["css=#edit-btn", "css:finder"],
+        ["xpath=//button[@id='edit-btn']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[6]/button", "xpath:idRelative"],
+        ["xpath=//td[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43dc8dbf-85ba-450c-a4a7-b14b40f62131",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46690ca8-b4c4-4fbe-a1ae-ce4a0adc4457",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "el principito"
+    }, {
+      "id": "83970696-ccbe-46e8-b15e-33d55cccd4ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33626a4b-53ff-49ab-ac30-a64b79f89a6b",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc24ed67-fb3f-4148-a59a-bb40fe356cc6",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b75503ba-d01c-4790-966a-584f42c40009",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4eae63ec-e8a1-464b-b16a-26d3e72fe680",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Book updated successfull"
+    }]
+  }, {
+    "id": "ed970871-799b-4fa0-92d0-68c6c1135499",
+    "name": "Actualizar reservacion",
+    "commands": [{
+      "id": "064750e4-4327-4355-bf92-beff0b26d6b7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1bba552-4ef8-447a-814e-0afe6a7ccad8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "441195b8-9300-4ff2-a889-7a8539f820cb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7949a231-6224-4b6d-b332-453c7fa64bd0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Reservas",
+      "targets": [
+        ["linkText=Reservas", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Reservas')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[3]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/lends']", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Reservas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "867f2b7e-b134-4f3a-9076-05f72df94b88",
+      "comment": "",
+      "command": "click",
+      "target": "id=edit-btn",
+      "targets": [
+        ["id=edit-btn", "id"],
+        ["css=#edit-btn", "css:finder"],
+        ["xpath=//button[@id='edit-btn']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[7]/button", "xpath:idRelative"],
+        ["xpath=//td[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e9bcf05-3321-4d34-bc3e-1129f441b322",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a5a6190-8de5-4b78-a894-2bd1e62de37b",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76508410-a649-46c7-afb2-1368cf094ab9",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "30"
+    }, {
+      "id": "ba1949c9-ca43-458d-8ca8-ad69f9958152",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9cfc007-9ca8-447f-a93a-ea3823745a95",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.col:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "d725c9c8-f131-4092-b1ea-886548c7ce82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(3)",
+      "targets": [
+        ["css=.col:nth-child(3)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86141c96-a604-476a-b256-075bb8da33bb",
+      "comment": "",
+      "command": "click",
+      "target": "id=user-select",
+      "targets": [
+        ["id=user-select", "id"],
+        ["name=user_id", "name"],
+        ["css=#user-select", "css:finder"],
+        ["xpath=//select[@id='user-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[3]/select", "xpath:idRelative"],
+        ["xpath=//label[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c8c093d-5337-4455-87fb-52b9e4a68534",
+      "comment": "",
+      "command": "select",
+      "target": "id=user-select",
+      "targets": [],
+      "value": "label=carlos"
+    }, {
+      "id": "07ef080b-6c41-4314-8b24-ac806014fe2f",
+      "comment": "",
+      "command": "click",
+      "target": "id=book-select",
+      "targets": [
+        ["id=book-select", "id"],
+        ["name=book_id", "name"],
+        ["css=#book-select", "css:finder"],
+        ["xpath=//select[@id='book-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[4]/select", "xpath:idRelative"],
+        ["xpath=//label[4]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'el principito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b769c61e-8f04-408a-b553-06509f02448a",
+      "comment": "",
+      "command": "click",
+      "target": "id=book-select",
+      "targets": [
+        ["id=book-select", "id"],
+        ["name=book_id", "name"],
+        ["css=#book-select", "css:finder"],
+        ["xpath=//select[@id='book-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[4]/select", "xpath:idRelative"],
+        ["xpath=//label[4]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'el principito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30650bb3-dd9f-44dc-b4e8-be60e4eb569b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Reservar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37c43d78-32f7-424d-8005-a0f56f60d306",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6639ce12-d2a0-43ff-9b34-688f5f215558",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "The book loan updated successfull"
+    }]
+  }, {
+    "id": "8599b567-a265-4d5c-92de-cea1f8ffcf38",
+    "name": "Actualizar venta",
+    "commands": [{
+      "id": "684bd4af-1187-426f-ae4e-756cbef072e6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b13db4ea-c5bf-46ac-a819-2275a7532c11",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25f37bb2-af14-47ff-b5f6-0d6e8645628b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67824144-2771-4cf8-a3eb-2c050922e13b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ventas",
+      "targets": [
+        ["linkText=Ventas", "linkText"],
+        ["css=.nav-link:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Ventas')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[4]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/sales']", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ventas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9fb1c9a-bf4a-480a-9a91-6119488a7e3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=edit-btn",
+      "targets": [
+        ["id=edit-btn", "id"],
+        ["css=#edit-btn", "css:finder"],
+        ["xpath=//button[@id='edit-btn']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[5]/button", "xpath:idRelative"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "798085c2-c7ec-4200-98cf-1ff0e3753b34",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "09b9532b-7cc4-40f7-9e6b-9837241f1030",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantity",
+      "targets": [
+        ["name=quantity", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b9010e4-12b3-4082-a239-804055397247",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(2)",
+      "targets": [
+        ["css=.col:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a33f62d1-9d70-471c-a668-4efe79cd4654",
+      "comment": "",
+      "command": "click",
+      "target": "id=user-select",
+      "targets": [
+        ["id=user-select", "id"],
+        ["name=user_id", "name"],
+        ["css=#user-select", "css:finder"],
+        ["xpath=//select[@id='user-select']", "xpath:attributes"],
+        ["xpath=//form[@id='book-form']/div/label[2]/select", "xpath:idRelative"],
+        ["xpath=//label[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "926a6ad0-deac-4982-927e-82d569fcc000",
+      "comment": "",
+      "command": "select",
+      "target": "id=user-select",
+      "targets": [],
+      "value": "label=estela"
+    }, {
+      "id": "4d765338-f6d5-4f36-959e-d84afdc6f385",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='book-form']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Comprar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd806052-0d73-4884-8c99-99f6e83255f5",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d6687a4-51fe-496b-8836-4e7c94668523",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Sale updated successfull"
+    }]
+  }, {
+    "id": "c5e797b3-9f11-4343-839a-59b1214ae4e0",
+    "name": "Eliminar usuario",
+    "commands": [{
+      "id": "8fe7fcd3-bbec-4dcd-8afd-763d1096681f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b6844da-c63c-4173-9c31-eec7bd966e85",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7db0574-cf76-41a5-a628-20e05f219a51",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31df2aa1-e914-4228-9136-ecda42688a63",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Usuarios",
+      "targets": [
+        ["linkText=Usuarios", "linkText"],
+        ["css=.nav-link:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Usuarios')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[5]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/users']", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Usuarios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a49e6a20-9012-4873-ac8c-79aab5f6953c",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-delete",
+      "targets": [
+        ["id=btn-delete", "id"],
+        ["css=tr:nth-child(1) #btn-delete", "css:finder"],
+        ["xpath=//button[@id='btn-delete']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[4]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0594522-5ca7-400e-951b-6775907ab7ac",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae835d29-eef9-4f3b-a590-3994f0c453fb",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "User deleted successfull"
+    }]
+  }, {
+    "id": "62b69697-1f8f-443f-8942-b9e7f2199faa",
+    "name": "Eliminar author",
+    "commands": [{
+      "id": "31b12b0d-b11c-4a01-b67e-93616b82ff02",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31c2f5a8-d9a0-4b2e-9660-2ac96c1407ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70acc318-ef92-4933-9056-9bb251f80036",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ffb13ad-fee7-45e5-b7ce-f1583de25ddc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Autores",
+      "targets": [
+        ["linkText=Autores", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Autores')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/authors']", "xpath:href"],
+        ["xpath=//div[2]/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Autores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82689d1b-ce1f-471a-aa99-c2acf7af1b69",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-delete",
+      "targets": [
+        ["id=btn-delete", "id"],
+        ["css=tr:nth-child(1) #btn-delete", "css:finder"],
+        ["xpath=//button[@id='btn-delete']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[5]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f638e31-b20d-4368-a846-2e654e4e233f",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8ad33c2-edea-4542-a7f5-98ac8ee19cd3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Author deleted successfull"
+    }, {
+      "id": "4f51011c-0ad3-45ec-8530-0d0fec50047a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "161dcab3-35ef-4859-bcfa-7759ce695d20",
+    "name": "Eliminar libro",
+    "commands": [{
+      "id": "fc8d6bfd-daa1-4db3-aead-49af12cda998",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d7f58a9-22d0-466a-8f82-9a65e885c3da",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b05443b-49df-4b50-9ed2-59112bbea3b4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1e4f77e-d865-4f4b-8942-6efb05fed65d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Libros",
+      "targets": [
+        ["linkText=Libros", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Libros')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Libros')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "678f9d3c-23cd-474f-9670-9ab72bfd9d93",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-delete",
+      "targets": [
+        ["id=btn-delete", "id"],
+        ["css=tr:nth-child(1) #btn-delete", "css:finder"],
+        ["xpath=//button[@id='btn-delete']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[6]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4619d8cc-47fa-476b-95b8-819b605e2ee5",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1301ffd4-2775-4acc-a2f8-6f2c08b276bd",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Book deleted successfull"
+    }, {
+      "id": "d2d24613-e032-4e98-9f53-54ff781de7e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "235a5494-9ea6-40cc-92ca-48aaa2eec784",
+    "name": "Eliminar reservacion",
+    "commands": [{
+      "id": "46c52026-ff5b-4460-9525-0b0ec2386a48",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9530341b-4b66-441d-8488-efd9f431e585",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bc0b061-9994-478a-90bf-565dc04dbbe5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e37fd81-a14a-4079-8209-72cc82c43be1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Reservas",
+      "targets": [
+        ["linkText=Reservas", "linkText"],
+        ["css=#collapseLayouts .nav-link:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Reservas')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[3]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/lends']", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Reservas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a48213f-a990-40eb-9b45-18057f3c65ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-delete",
+      "targets": [
+        ["id=btn-delete", "id"],
+        ["css=tr:nth-child(1) #btn-delete", "css:finder"],
+        ["xpath=//button[@id='btn-delete']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[7]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3f93477-6064-4655-98ec-4bd28581a25a",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f844d4a-2406-4eea-acd9-163483963a07",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Book returned succesfull"
+    }, {
+      "id": "339839fa-785c-453c-8fb8-b1fd868d43fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e1bf7a3d-a028-4954-9217-6243a7bd4d30",
+    "name": "Eliminar venta",
+    "commands": [{
+      "id": "9024f348-70cd-4d54-b432-a17b91156612",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a4a5225-24f1-4aa3-9a6e-ab603c1c9892",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6084cffe-65b9-4555-90f5-e07d20359e32",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Biblioteca",
+      "targets": [
+        ["linkText=Biblioteca", "linkText"],
+        ["css=.sb-sidenav-menu > .nav > .nav-link", "css:finder"],
+        ["xpath=//nav[@id='sidenavAccordion']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Biblioteca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a4c7ada-a99f-4eeb-a488-e610d2fa7f4b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ventas",
+      "targets": [
+        ["linkText=Ventas", "linkText"],
+        ["css=.nav-link:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Ventas')]", "xpath:link"],
+        ["xpath=//div[@id='collapseLayouts']/nav/a[4]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/sales']", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ventas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59b029a9-8c21-43fa-b5c3-bdefe41d7b9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-delete",
+      "targets": [
+        ["id=btn-delete", "id"],
+        ["css=#btn-delete", "css:finder"],
+        ["xpath=//button[@id='btn-delete']", "xpath:attributes"],
+        ["xpath=//table[@id='home-table']/tbody/tr/td[5]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad9d948c-88b4-41d6-8c94-a3da0a9929e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27baaf95-e4e2-4d1d-a5de-44b378ccb00f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-html-container",
+      "targets": [
+        ["id=swal2-html-container", "id"],
+        ["css=#swal2-html-container", "css:finder"],
+        ["xpath=//div[@id='swal2-html-container']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Sale deleted successfull"
+    }, {
+      "id": "990d6c1f-e78f-4edd-8faa-bd5577e906ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9433e0d7-fb50-4ca5-a06d-5fca6f3327d1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a3091ebc-8b13-4f9b-9092-964dd9de6f26"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}
