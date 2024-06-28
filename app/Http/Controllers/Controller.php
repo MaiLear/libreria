@@ -25,8 +25,8 @@ class Controller extends BaseController
     protected function addActionsBtn(array $array):array{
         if(empty($array)) return [];
         $data = array_map(function($value){
-            $value['actions'] = "<button class='btn btn-primary' id='edit-btn' data-bs-toggle='modal' data-bs-target='#modal' data-id={$value['id']}>Editar</button>
-            <button class='btn btn-danger' id='btn-delete' data-id={$value['id']}>Eliminar</button>";
+            $value['actions'] = "<div class='btn-group' role='group' aria-label='Basic example'> <button class='btn btn-primary' id='edit-btn' data-bs-toggle='modal' data-bs-target='#modal' data-id={$value['id']}>Editar</button>
+            <button class='btn btn-danger' id='btn-delete' data-id={$value['id']}>Eliminar</button></div>";
             return $value;
         },$array);
         return $data;
