@@ -89,7 +89,7 @@ document.addEventListener("click", async (e) => {
             fetchOptions.method = 'DELETE';
             route = `${BASEPATH}/${$button.getAttribute('data-id')}`;
             let response = await request(route,fetchOptions);
-            sweetAlert2({title:'Successfull',text:response.message,icon:'success'})
+            sweetAlert2({title:'Exito',text:response.message,icon:'success'})
             reloadTable(dataTables["user-table"]);
 
         break;
@@ -111,7 +111,7 @@ document.addEventListener("submit", async (e) => {
                 fetchOptions,
                 (response) => {
                     console.log(response);
-                    sweetAlert2({title:'Successfull',text:response.message,icon:'success'})
+                    sweetAlert2({title:'Exito',text:response.message,icon:'success'})
                     $form.reset();
                     hideModal(idFormModal);
                     reloadTable(dataTables["user-table"]);

@@ -30,10 +30,10 @@ class LendController extends Controller
             $decreaseBookQuantity = $this->updateBooksQuanity($request->book_id,$request->quantity);
             if(!is_bool($decreaseBookQuantity)) return $decreaseBookQuantity;
             Lend::create($request->all());
-            return response()->json(array('error'=>'','message'=>'The book loan created successfull'));
+            return response()->json(array('error'=>'','message'=>'El prestamo se hizo exitosamente'));
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>"Can't  save the book loan"),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>"No se pudo hacer el prestamo"),500);
             
         }
     }
@@ -47,7 +47,7 @@ class LendController extends Controller
             $lend = Lend::findOrFail($id);
             return response()->json($lend);
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'The book loan not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'El prestamo no fue encontrado'),404);
         }
             
     }
@@ -61,12 +61,12 @@ class LendController extends Controller
             $book->save(); 
 
             $this->destroy($id);
-            return response()->json(array('error'=>'','message'=>'Book returned succesfull'));
+            return response()->json(array('error'=>'','message'=>'El libro fue devuelto exitosamente'));
             
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>' The book loan not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>' El prestamo no fue encontrado'),404);
         }catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'The book loan not returned'),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'El libro no pudo ser devuelto'),500);
         }
 
 
@@ -86,13 +86,13 @@ class LendController extends Controller
 
             $lend = Lend::findOrFail($id);
             $lend->update($request->all());
-            return response()->json(array('error'=>'','message'=>'The book loan updated successfull'));
+            return response()->json(array('error'=>'','message'=>'El prestamo fue actualizado exitosamente'));
 
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>'The book loan not found','message'=>$e->getMessage()),404);
+            return response()->json(array('error'=>'El prestamo no fue encontrado','message'=>$e->getMessage()),404);
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>'The book loan not updated','message'=>$e->getMessage()),500);
+            return response()->json(array('error'=>'El prestamo no se pudo actualizar','message'=>$e->getMessage()),500);
         }
 
     }
@@ -105,9 +105,9 @@ class LendController extends Controller
         try{
             $lend = Lend::findOrFail($id);
             $lend->delete();
-            return response()->json(array('error'=> '', 'message'=> 'The book loan deleted successfull'));
+            return response()->json(array('error'=> '', 'message'=> 'El prestamo se elimino exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>'The book loan not found','message'=>$e->getMessage()),404);
+            return response()->json(array('error'=>'El prestamo no fue encontrado','message'=>$e->getMessage()),404);
         }
 
     }

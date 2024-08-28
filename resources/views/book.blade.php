@@ -14,9 +14,9 @@
         <th>ID</th>
         <th>NOMBRE</th>
         <th>COSTO</th>
-        <th>QUANTITY</th>
-        <th>AUTHOR</th>
-        <th>ACTIONS</th>
+        <th>CANTIDAD</th>
+        <th>AUTOR</th>
+        <th>ACCIONES</th>
 
     </thead>
 

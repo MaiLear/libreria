@@ -27,9 +27,9 @@ class BookController extends Controller
     {
         try{
             Book::create($request->all());
-            return response()->json(array('error'=>'','message'=>'Book created successfull'));
+            return response()->json(array('error'=>'','message'=>'Libro creado exitosamente'));
         }catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>"Can't  save the book"),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>"No se pudo guardar el libro"),500);
         }
         
     
@@ -44,7 +44,7 @@ class BookController extends Controller
             $book = Book::findOrFail($id);
             return response()->json($book);
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Book not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Libro no encontrado'),404);
         }
             
     }
@@ -60,12 +60,12 @@ class BookController extends Controller
         try{
             $book = Book::findOrFail($id);
             $book->update($request->all());
-            return response()->json(array('error'=>'','message'=>'Book updated successfull'));
+            return response()->json(array('error'=>'','message'=>'Libro actualizado exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Book not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Libro no encontrado'),404);
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Book not updated'),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Libro no actualizado'),500);
         }
 
     }
@@ -78,9 +78,9 @@ class BookController extends Controller
         try{
             $book = Book::findOrFail($id);
             $book->delete();
-            return response()->json(array('error'=> '', 'message'=> 'Book deleted successfull'));
+            return response()->json(array('error'=> '', 'message'=> 'Libro eliminado exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Book not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Libro no encontrado'),404);
         }
 
     }

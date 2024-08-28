@@ -25,9 +25,9 @@ class AuthorController extends Controller
     {
         try{
             Author::create($request->all());
-            return response()->json(array('error'=>'','message'=>'Author created successfull'));
+            return response()->json(array('error'=>'','message'=>'Autor creado exitosamente'));
         }catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>"Can't  save the author"),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>"No se pudo guardar el autor"),500);
         }
         
     
@@ -42,7 +42,7 @@ class AuthorController extends Controller
             $Author = Author::findOrFail($id);
             return response()->json($Author);
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Author not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Autor no encontrado'),404);
         }
             
     }
@@ -58,12 +58,12 @@ class AuthorController extends Controller
         try{
             $Author = Author::findOrFail($id);
             $Author->update($request->all());
-            return response()->json(array('error'=>'','message'=>'Author updated successfull'));
+            return response()->json(array('error'=>'','message'=>'Autor actualizado exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Author not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Autor no encontrado'),404);
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Author not updated'),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Autor no actualizado'),500);
         }
 
     }
@@ -76,9 +76,9 @@ class AuthorController extends Controller
         try{
             $Author = Author::findOrFail($id);
             $Author->delete();
-            return response()->json(array('error'=> '', 'message'=> 'Author deleted successfull'));
+            return response()->json(array('error'=> '', 'message'=> 'Autor eliminado exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Author not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Autor no encontrado'),404);
         }
 
     }

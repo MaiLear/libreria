@@ -24,10 +24,10 @@ class UserController extends Controller
     {
         try{
             User::create($request->all());
-            return response()->json(array('error'=>'','message'=>'User created successfull'));
+            return response()->json(array('error'=>'','message'=>'Usuario creado exitosamente'));
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>"Can't  save user"),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>"No se pudo guardar el usuario"),500);
             
         }
     }
@@ -41,7 +41,7 @@ class UserController extends Controller
             $user = User::findOrFail($id);
             return response()->json($user);
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'User not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Usuario no encontrado'),404);
         }
             
     }
@@ -57,12 +57,12 @@ class UserController extends Controller
         try{
             $user = User::findOrFail($id);
             $user->update($request->all());
-            return response()->json(array('error'=>'','message'=>'User updated successfull'));
+            return response()->json(array('error'=>'','message'=>'Usuario actualizado exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'User not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Usuario no encontrado'),404);
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'User not updated'),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Usuario no actualizado'),500);
         }
 
     }
@@ -75,9 +75,9 @@ class UserController extends Controller
         try{
             $user = User::findOrFail($id);
             $user->delete();
-            return response()->json(array('error'=> '', 'message'=> 'User deleted successfull'));
+            return response()->json(array('error'=> '', 'message'=> 'Usuario eliminado exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>'User not found','message'=>$e->getMessage()),404);
+            return response()->json(array('error'=>'Usuario no encontrado','message'=>$e->getMessage()),404);
         }
 
     }

@@ -28,4 +28,13 @@ class BookRequest extends FormRequest
             'author_id' => ['required','integer']
         ];
     }
+
+    public function attributes(){
+        return [
+            'name'=> 'nombre',
+            'cost' => 'valor',
+            'quantity' => 'cantidad',
+            'author_id' => 'autor'
+        ];
+    }
 }

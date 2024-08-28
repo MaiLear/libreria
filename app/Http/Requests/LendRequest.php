@@ -28,4 +28,14 @@ class LendRequest extends FormRequest
             'book_id' => ['required','integer']
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'quantity' => 'cantidad',
+            'end_date' => 'fecha fin',
+            'user_id' => 'usuario',
+            'book_id' => 'libro'
+        ];
+    }
 }

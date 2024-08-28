@@ -15,7 +15,7 @@
         <th>CANTIDAD</th>
         <th>USUARIO</th>
         <th>LIBRO</th>
-        <th>ACTIONS</th>
+        <th>ACCIONES</th>
 
     </thead>
 

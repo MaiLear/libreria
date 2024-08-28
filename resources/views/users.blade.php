@@ -14,7 +14,7 @@
         <th>ID</th>
         <th>NOMBRE</th>
         <th>NUMERO DE DOCUMENTO</th>
-        <th>ACTIONS</th>
+        <th>ACCIONES</th>
 
 
     </thead>

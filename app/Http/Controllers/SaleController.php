@@ -39,10 +39,10 @@ class SaleController extends Controller
 
             $request['subtotal'] = $this->generateSubtotal($request->book_id,$request->quantity);
             Sale::create($request->all());
-            return response()->json(array('error'=>'','message'=>'Sale created successfull'));
+            return response()->json(array('error'=>'','message'=>'Venta creada exitosamente'));
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>"Can't  save sale"),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>"No se pudo guardar la venta"),500);
             
         }
     }
@@ -56,7 +56,7 @@ class SaleController extends Controller
             $sale = Sale::findOrFail($id);
             return response()->json($sale);
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Sale not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Venta no encontrada'),404);
         }
             
     }
@@ -73,12 +73,12 @@ class SaleController extends Controller
             $this->updateBooksQuanity($request->book_id,$request->quantity);
             $sale = Sale::findOrFail($id);
             $sale->update($request->all());
-            return response()->json(array('error'=>'','message'=>'Sale updated successfull'));
+            return response()->json(array('error'=>'','message'=>'Venta actualizada exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Sale not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Venta no encontrada'),404);
         }
         catch(Throwable $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Sale not updated'),500);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Venta no actualizada'),500);
         }
 
     }
@@ -91,9 +91,9 @@ class SaleController extends Controller
         try{
             $sale = Sale::findOrFail($id);
             $sale->delete();
-            return response()->json(array('error'=> '', 'message'=> 'Sale deleted successfull'));
+            return response()->json(array('error'=> '', 'message'=> 'Venta eliminada exitosamente'));
         }catch(ModelNotFoundException $e){
-            return response()->json(array('error'=>$e->getMessage(),'message'=>'Sale not found'),404);
+            return response()->json(array('error'=>$e->getMessage(),'message'=>'Venta no encontrada'),404);
         }
 
     }

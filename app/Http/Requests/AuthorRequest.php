@@ -27,4 +27,13 @@ class AuthorRequest extends FormRequest
             'age' => ['required','integer']
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'first_name' => 'primer nombre',
+            'second_name' => 'segundo nombre',
+            'age' => 'años',
+        ];
+    }
 }

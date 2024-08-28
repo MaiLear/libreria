@@ -26,4 +26,12 @@ class UserRequest extends FormRequest
             'document_number' => ['required','integer','min:5','unique:users,document_number,'.$this->route('user')],
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'name' => 'nombre',
+            'document_number' => 'numero de documento',
+        ];
+    }
 }

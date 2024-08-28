@@ -15,7 +15,7 @@
         <th>PRIMER NOMBRE</th>
         <th>SEGUNDO NOMBRE</th>
         <th>EDAD</th>
-        <th>ACTIONS</th>
+        <th>ACCIONES</th>
 
     </thead>
 
